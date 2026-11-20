@@ -1,0 +1,25 @@
+{% extends "roadmap/base.html" %}
+{% block content %}
+    <div class="badge">SkillPath AI</div>
+    <h1>Personalized Learning Roadmap</h1>
+    <p class="subtitle">Tell us where you are and where you want to go. We'll generate the path.</p>
+
+    <div class="card">
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.current_skills.id_for_label }}">Current skills</label>
+            {{ form.current_skills }}
+
+            <label for="{{ form.education.id_for_label }}">Education</label>
+            {{ form.education }}
+
+            <label for="{{ form.interests.id_for_label }}">Interests</label>
+            {{ form.interests }}
+
+            <label for="{{ form.target_job.id_for_label }}">Target job</label>
+            {{ form.target_job }}
+
+            <button type="submit">Generate My Roadmap</button>
+        </form>
+    </div>
+{% endblock %}

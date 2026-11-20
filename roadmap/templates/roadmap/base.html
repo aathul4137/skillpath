@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillPath AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #171a21;
+            --accent: #6c5ce7;
+            --accent-light: #a29bfe;
+            --text: #e8e8ec;
+            --muted: #9aa0ab;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            padding: 40px 16px;
+        }
+        .container { width: 100%; max-width: 640px; }
+        h1 { font-size: 1.6rem; margin-bottom: 4px; }
+        p.subtitle { color: var(--muted); margin-top: 0; margin-bottom: 28px; }
+        .card {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+        label { display: block; font-size: 0.85rem; color: var(--muted); margin: 16px 0 6px; }
+        .input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #2c2f38;
+            background: #0f1115;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .input:focus { outline: none; border-color: var(--accent-light); }
+        button {
+            margin-top: 24px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: var(--accent);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover { background: var(--accent-light); }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(108,92,231,0.15);
+            color: var(--accent-light);
+            margin-bottom: 20px;
+        }
+        .step {
+            background: var(--card);
+            border: 1px solid #2c2f38;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 4px;
+        }
+        .step .step-title { font-weight: 600; }
+        .step .step-desc { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+        .arrow {
+            text-align: center;
+            color: var(--accent-light);
+            font-size: 1.2rem;
+            margin: 2px 0;
+        }
+        a.back { color: var(--accent-light); text-decoration: none; font-size: 0.9rem; }
+        .summary { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+        .summary b { color: var(--text); }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
